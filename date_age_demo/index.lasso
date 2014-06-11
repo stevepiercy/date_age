@@ -2,15 +2,20 @@
 // Either load the file date_age.inc during server or site startup,
 // in server or site library, or include it.  Choose one method.
 // I recommend site startup.
-
 // include('date_age.inc'); // optional loading method
-]
-[include('/lasso/_inc/_top.inc')]
-
+]<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>date_age by Steve Piercy</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="jquery.datepick.css" />
+</head>
+<body>
+    <h1>date_age by Steve Piercy</h1>
     <p>Find the age by entering a birthdate. Optionally enter a date of death to determine the age at death.</p>
     <form method="post" action="[response_filepath]">
-        Birthdate: <input type="text" id="dob" name="dob" size="12" maxlength="10" value="[action_param('dob')]" placeholder="yyyy-mm-dd"><br />
-        Date of death: <input type="text" id="end" name="end" size="12" maxlength="10" value="[action_param('end')]" placeholder="yyyy-mm-dd"><br />
+        <label>Birthdate</label><input type="text" id="dob" name="dob" size="12" maxlength="10" value="[action_param('dob')]" placeholder="yyyy-mm-dd"><br />
+        <label>Date of death</label><input type="text" id="end" name="end" size="12" maxlength="10" value="[action_param('end')]" placeholder="yyyy-mm-dd"><br />
         <input type="submit" name="submit" value="Get Age" class="button" />
     </form>
 [
@@ -55,4 +60,14 @@ if(action_param('submit') != '');
 <p>
 <a href="http://keith-wood.name/datepick.html">Datepick jQuery plugin</a>
 </p>
-[include('/lasso/_inc/_bottom.inc')]
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script type="text/javascript" src="jquery.plugin.js"></script>
+<script type="text/javascript" src="jquery.datepick.js"></script>
+<script>
+$(function() {
+    $('#dob').datepick({dateFormat: 'yyyy-mm-dd'});
+    $('#end').datepick({dateFormat: 'yyyy-mm-dd'});
+});
+</script>
+</body>
+</html>
