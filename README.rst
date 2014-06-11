@@ -2,7 +2,7 @@ date_age - Lasso 8 Custom Tag Returns Age in Years
 ##################################################
 
 Read the article `date_age - Lasso 8 Custom Tag Returns Age in Years
-<http://www.stevepiercy.com/date_age-lasso-8-custom-tag-returns-age-in-years.html>`_.
+<http://www.stevepiercy.com/articles/date_age-lasso-8-custom-tag-returns-age-in-years/>`_.
 
 Description
 ===========
