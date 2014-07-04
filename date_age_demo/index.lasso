@@ -1,8 +1,8 @@
 [
-// Either load the file date_age.inc during server or site startup,
+// Either load the file date_age.lasso during server or site startup,
 // in server or site library, or include it.  Choose one method.
 // I recommend site startup.
-// include('date_age.inc'); // optional loading method
+// include('date_age.lasso'); // optional loading method
 ]<!DOCTYPE html>
 <html>
 <head>
